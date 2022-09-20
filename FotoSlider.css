@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #23E3C9;
+}
+
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #bb184e;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #ce1d3a;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #ce1d3a;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #ce1d3a;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #ce1d3a;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #ce1d3a;
+}
+body {
+  color: #ffffffbf;
+  font-family: 'Poppins', sans-serif;
+  background: #e49eb9;
+  padding: 40px;
+}
+
+.typewriter-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-ce;
+}
+.typewriter p {
+  font-size: 35px;
+  font-weight:bolder;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+margin-top: -600px;
+  animation: typing 3.5s steps(24);
+}
+.typewriter p::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background: #dadada;
+  right: 0;
+  top: 0;
+  animation: cursor 1s infinite;
+}
+.btn1 {
+  width: 200px;
+  height: 60px;
+  background: #ce2d6a;
+  position: absolute;
+  margin-top: 700px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+.btn1::before{
+  content: 'Regresar Aqui';
+  color: white;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  transition: all .5s ease-in-out;
+}
+.btn1:hover::before{
+  top: -30px;
+}
+
+.btn1::after {
+  font-family: 'FontAwesome';
+  content: "\f004";
+  font-size: 40px;
+  color: red;
+  position: absolute;
+  top: 150%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  transition: all .5s ease-in-out;
+}
+.btn1:hover::after {
+  top: 50%;
+}
+@keyframes typing {
+  from {width:0}
+  to {width: 51%;}
+}
+
+@keyframes cursor {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+
+  .btn1 {
+    width: 200px;
+    height: 80px;
+    background: #ce2d6a;
+    position: absolute;
+    margin-top: 1000px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    
+  }
+  .typewriter p {
+    font-size: 50px;
+    font-weight:bolder;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+  margin-top: -900px;
+    animation: typing 3.5s steps(24);
+  }
+  .btn1::before{
+    content: 'Regresar Aqui';
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+  }
+  .slider{
+    width: 800px;
+    height: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .slides{
+    width: 500%;
+    height: 800px;
+    display: flex;
+  }
+  
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 800px;
+    height: 800px;
+  }
+  .navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 760px;
+}
+  .navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+}
